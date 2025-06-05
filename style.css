@@ -1,0 +1,110 @@
+:root {
+  --Green--: hsl(75, 94%, 57%);
+  --White--: hsl(0, 0%, 100%);
+  --Grey-700--: hsl(0, 0%, 20%);
+  --Grey-800--: hsl(0, 0%, 12%);
+  --Grey-900--: hsl(0, 0%, 8%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-VariableFont_slnt\,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: var(--White--);
+}
+
+body {
+  background-color: var(--Grey-900--);
+  font-family: "Inter", sans-serif;
+  color: var(--White--);
+  font-size: 14px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.social-profile-card {
+  background-color: var(--Grey-800--);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 25rem;
+  padding: 2.5rem;
+  border-radius: 1rem;
+}
+
+.avatar {
+  border-radius: 100%;
+  height: 6rem;
+}
+
+.user-info {
+  padding: 1.5rem 0;
+}
+
+.user-info h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.user-info p {
+  font-weight: 700;
+  color: var(--Green--);
+}
+
+.occupation-hobbie {
+  padding-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.links a {
+  background-color: var(--Grey-700--);
+  font-weight: 700;
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+}
+
+.links a:hover {
+  background-color: var(--Green--);
+  color: var(--Grey-700--);
+  cursor: pointer;
+}
+
+.links a:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 450px) {
+  .social-profile-card {
+    width: 21rem;
+    padding: 1.5rem;
+  }
+}
